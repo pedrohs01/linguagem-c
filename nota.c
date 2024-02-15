@@ -19,7 +19,7 @@ int main(){
     printf ("Digite a terceira nota do aluno: \n");
     scanf("%d",&n4);
 
-    soma = n1 + n2 + n3 + n4 + / 4;
+    soma = n1 + n2 + n3 + n4 + 4;
 
     printf("A nota media do aluno é %d\n",soma);
     return 0;
