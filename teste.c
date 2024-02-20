@@ -1,30 +1,21 @@
 #include <stdio.h>
-
-#include<math.h>
  
-int main(){
-
-    int binario[6]={1,0,1,1,1,0};
-
-    int rs = 0;
-
-    int pos=0;
-
-    int exp = 5;
+int main() {
+    int c1[10] = {10,5,68,8,47,12,54,13,62,11};
+    int c2[15] = {11,5,62,112,84,76,12,55,59,85,13,0,14,19,18};
+    int tamanho1 = sizeof(c1) / sizeof(c1[0]);
+    int tamanho2 = sizeof(c2) / sizeof(c2[0]);
  
-    while( pos <= 5){
-
-        rs += binario[pos] * ( pow( 2 , exp));
-
-        pos++;
-
-        exp--;
+    printf("Números iguais nas duas coleções:\n");
  
+    for (int i = 0; i < tamanho1; i++) {
+        for (int j = 0; j < tamanho2; j++) {
+            if (c1[i] == c2[j]) {
+                printf("%d\n", c1[i]);
+                break; // Para evitar imprimir o mesmo número duas vezes
+            }
+        }
     }
-
-    printf("%d\n",rs);
-
+ 
     return 0;
-
 }
-
